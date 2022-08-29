@@ -14,10 +14,10 @@ export function Expenses(){
     const [show2, setShow2]=useState(false)
     const [item, setItem]=useState({})
     useEffect(()=>{
-        fetch('https://employee-expense-tracker-api.herokuapp.com/api/expenses',{ mode: 'no-cors' }).then(response=>response.json()).then(data=>setExpenses(data._expenses))
+        fetch('https://employee-expense-tracker-api.herokuapp.com/api/expenses').then(response=>response.json()).then(data=>setExpenses(data._expenses))
     },[])
     useEffect(()=>{
-        fetch('https://employee-expense-tracker-api.herokuapp.com/api/expenses',{ mode: 'no-cors' }).then(response=>response.json()).then(data=>setreimburse(data.reimburse))
+        fetch('https://employee-expense-tracker-api.herokuapp.com/api/expenses').then(response=>response.json()).then(data=>setreimburse(data.reimburse))
     },[])
     console.log(expenses)
     console.log(reimburse)
